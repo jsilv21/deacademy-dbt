@@ -15,10 +15,20 @@ models:
       - name: emp_salary
         tests:
           - value_check
-
+  - name: customer
+    description: dbt model for customer table
+  - name: customer_vw
+    description: dbt model for customer table
+      
 sources:
   - name: employee
     database: DBT_DB
     schema: PUBLIC
     tables:
       - name: EMPLOYEE_RAW
+  - name: customer
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: CUSTOMER_SRC
+    
